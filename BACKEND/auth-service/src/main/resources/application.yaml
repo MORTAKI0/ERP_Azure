@@ -1,3 +1,24 @@
+server:
+  port: 8081
+
 spring:
   application:
     name: auth-service
+
+  jpa:
+    open-in-view: false
+
+  datasource:
+    url: jdbc:postgresql://${PGHOST}:${PGPORT}/${PGDATABASE}?sslmode=require
+    username: ${PGUSER}
+    password: ${PGPASSWORD}
+
+  flyway:
+    enabled: true
+    baseline-on-migrate: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
