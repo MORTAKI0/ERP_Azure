@@ -1,0 +1,63 @@
+.login-page {
+  max-width: 420px;
+  margin: 4rem auto;
+  padding: 1.5rem;
+  border: 1px solid #d5d9e2;
+  border-radius: 10px;
+  background: #fff;
+}
+
+form {
+  display: grid;
+  gap: 0.5rem;
+}
+
+label {
+  margin-top: 0.5rem;
+  font-weight: 600;
+}
+
+input {
+  border: 1px solid #b9bfd1;
+  border-radius: 6px;
+  padding: 0.625rem 0.75rem;
+}
+
+button {
+  margin-top: 0.75rem;
+  border: 0;
+  border-radius: 6px;
+  padding: 0.75rem 1rem;
+  background: #2143b8;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.65;
+}
+
+.banner {
+  border-radius: 6px;
+  padding: 0.625rem 0.75rem;
+}
+
+.banner.warning {
+  background: #fff3dc;
+  color: #7d5612;
+}
+
+.banner.error {
+  background: #ffe3e6;
+  color: #9f1c34;
+}
+
+.error {
+  color: #9f1c34;
+}
+
+.correlation {
+  color: #505a74;
+}
