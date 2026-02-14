@@ -2,6 +2,7 @@ package com.minierp.auth.api.dto;
 
 public record LoginResponse(
         String accessToken,
-        String tokenType,
-        long expiresIn
+        long expiresInSeconds,
+        String refreshToken,
+        long refreshExpiresInSeconds
 ) {}

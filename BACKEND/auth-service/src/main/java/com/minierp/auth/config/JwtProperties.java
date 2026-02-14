@@ -6,10 +6,15 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 public record JwtProperties(
         String secret,
         String issuer,
-        long accessTtlMin
+        long accessTtlMin,
+        long refreshTtlDays
 )
 {
     public long getAccessTtlMin() {
         return accessTtlMin;
+    }
+
+    public long getRefreshTtlDays() {
+        return refreshTtlDays;
     }
 }

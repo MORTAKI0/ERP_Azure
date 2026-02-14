@@ -66,6 +66,10 @@ public class JwtService {
         return props.getAccessTtlMin() * 60L;
     }
 
+    public long getRefreshTtlSeconds() {
+        return props.getRefreshTtlDays() * 24L * 60L * 60L;
+    }
+
 
     public record ParsedToken(String subject, List<String> roles, Instant expiresAt) {}
 }

@@ -4,6 +4,11 @@ server:
 spring:
   application:
     name: auth-service
+  mvc:
+    throw-exception-if-no-handler-found: true
+  web:
+    resources:
+      add-mappings: false
 
   jpa:
     open-in-view: false
@@ -30,8 +35,8 @@ security:
     secret: ${JWT_SECRET}
     issuer: ${JWT_ISSUER:mini-erp}
     access-ttl-min: ${JWT_ACCESS_TTL_MIN:15}
+    refresh-ttl-days: ${JWT_REFRESH_TTL_DAYS:7}
 
 logging:
   level:
     org.springframework.security: DEBUG
-
